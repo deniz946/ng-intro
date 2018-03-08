@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<p><img src="https://angular.io/assets/images/logos/angular/angular.svg" width="150" height="150"></p>
+				<p>Introduction to Angular 2+</p>
+				<p>by Denis Mehmed</p>
+				<small>http://codigodiario.me</small>
+			</section>
+			<section>
+				<h3>1. Introduction</h3>
+				<center><h4>Why Angular 4 is better than AngularJS?</h4></center>
+				<p style="font-size: 23px">Angular is a redesigned new framework for web application development. It’s
+					based on the popular AngularJS (version 1) framework, but it has changed a lot from
+					that first version. Two of the most important advantages are that it’s much faster than
+					its predecessor and it’s has a simplified API, there are fewer concepts to learn in
+					Angular 2+ than there were in AngularJS.</p>
+				</section>
+				<section>	
+					<h3>Advantages</h3>
+					<ul>
+						<li>We can use ES6 with Typescript</li>
+						<li>In-time linting</li>
+						<li>Interfaces</li>
+						<li>The most important: TYPING</li>
+						<li>Modular: We just use what we need when we need</li>
+						<li>Reusabe components to use elsewhere</li>
+						<li>Very good integration with design libraries(Bootstrap, Angular Material)</li>
+					</ul>
+				</section>
+				<section>
+					<h4>2. Typescript</h4>
+					<h5>let and const</h5>
+					<pre>
+						<code data-trim data-noescape>
+						let car = "car";	// We can use let if are going to reasign this variable
+						const newCar = "CAR"	// We can use const if the variable we are declaring is not going to be reasigned
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Smart string templating</h5>
+					<pre>
+						<code data-trim data-noescape>
+						const age = 23;
+						const text = `Im ${age} years old`
+						console.log(text);	// Im 23 years old
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Modules</h4>
+					<p>Typescript let us create small modules/class and letting us export and import it wherever we need to use it</p>
+				</section>
+				<section>
+					<h4>3. Setup a project</h4>
+					<ul>
+						<li>We need to install <a href="https://angular.io/guide/quickstart">ng-cli</a>: <code>npm install -g @angular/cli</code></li>
+						<li>Generate new project: <code>ng new bkSpain</code></li>
+						<li>Go to to new generated project folder: <code>cd bkSpain</code></li>
+						<li>And serve the application with: <code>ng serve</code></li>
+					</ul>
+				</section>
+				<section>
+					<h4>4. What Angular CLI can do?</h4>
+					<p><code>ng generate name</code> or <code>ng g</code></p>
+					<p>
+						<img src="https://i.gyazo.com/28d995b17c5f940c14589a1e3124f77c.png">
+					</p>
+				</section>
+				<section>
+					<h4>5. Project files structure</h4>
+					<img src="https://i.gyazo.com/3bafb70924960d8ca14007b80feec1dc.png">
+					<ul style="font-size: 21px">
+						<li>coverage: This is where the reporting from the coverage tests.</li>
+						<li>e2e: This is where the End to End test are (Protractor).</li>
+						<li>node_modules: NPM dependencies.</li>
+						<li>src: This is where our Angular application is.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>6. Components</h4>
+					<pre><code data-trim data-noescape>
+						import { Component } from '@angular/core';
+						@Component({
+							selector: 'app-root',
+							templateUrl: './app.component.html',
+							styleUrls: ['./app.component.css']
+						})
+						export class AppComponent {
+						title = 'app';
+				}
+			</code></pre>
+				<center>
+					<ul style="font-size: 21px">
+					<li class="bold">selector → This is the tag name to be used in the view (HTML) where this
+component’s template will be inserted inside.</li>
+					<li class="bold">templateUrl → This is the file where the view controlled by this component is.</li>
+					<li class="bold">styleUrls → Angular allows you to assign one or more CSS stylesheets to a
+component. Those styles will be applied only to the component template (and
+everything inside of it).</li>
+				</ul>
+				</center>
+		</section>
+		<section>
+			<h4>7. Directives</h4>
+			<ul>
+				<li>*ngIf</li>
+				<li>*ngFor</li>
+				<li>[disabled]</li>
+				<li>[ngClass]</li>
+			</ul>
+		</section>
+		<section>
+			<h4>8. Component types</h4>
+			<ul>
+				<li>SmartComponent</li>
+				<li>DumbComponent</li>
+			</ul>
+		</section>
+		<section>
+			<h1>That's all, thanks to everyone</h1>
+		</section>
+	</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+	</html>
