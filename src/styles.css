@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.panel-cd{
+  width: 70%;
+}
+table p{
+  font-size: 20px;
+}
+.todo_input{
+  width: 30%;
+}
+.tachado{
+  text-decoration:line-through;
+}

@@ -21,30 +21,7 @@
 
 
     </div>
+    <app-todos-list [todos]="todos" (todosChanged)="todosUpdated($event)"></app-todos-list>
   </div>
-  <div class="row">
-    <br>
-    <div class="col-md-6 col-md-offset-4">
-      <table class="table panel-cd">
-        <tr>
-          <th>TODO</th>
-          <th>Gestion</th>
-        </tr>
-        <tr *ngFor="let todo of todos; let i = index">
-          <td>
-            <p [ngClass]="{tachado: todo.done}">{{todo.title}}</p>
-          </td>
-          <td>
-            <button class="btn btn-info" *ngIf="!todo.done" (click)="todo.done = true">Terminado!</button> &nbsp;&nbsp;
-            <button class="btn btn-warning" (click)="deleteTodo(i)">Borrar</button>
-          </td>
-        </tr>
-        <tr *ngIf="todos.length === 0">
-          <td><strong style="color: red; font-size: 30px">No todos</strong></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
 
 </div>
