@@ -1,5 +1,18 @@
 # NgIntro
 
+## Presentation
+This is an introduction to Angular 4 project, it includes html presentation created with [reveal.js](https://revealjs.com/).
+
+The presentation files can be found in the /intro.
+
+To see the presentation: just open open the index.html file or create some local http server with [http-server](https://www.npmjs.com/package/http-server)
+
+## Code
+I've built a simple todo application divided in 3 branches.
+   * Master: Clean starter code
+   * 1_first_component: All the logic created in one component: app.component
+   * 2_more_complex_components: The same logic created before now separated in different components with it's @Inputs and @Outputs, created ts Class models created also.
+   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 ## Development server
